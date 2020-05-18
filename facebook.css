@@ -1,0 +1,360 @@
+
+/*my code*/
+  *{
+    text-decoration: none;
+  }
+  body{
+    background-color:#fff;
+  }
+  .site{
+    display:grid;
+    width:100%;
+    height:100vh;
+    grid-template-columns:auto;
+    grid-template-rows:250px auto;
+    grid-template-areas:
+    "index-header"
+    "index-content";
+  }
+  header{
+    width:100%;
+    grid-area:index-header;
+    color:white;
+    background-color:#0080ff;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:60px 100px;
+    grid-template-areas:
+    "index-facebook"
+    "index-login";
+  }
+  div.facebook-logo{
+    grid-area:index-facebook;
+    text-align:center;
+    font-size:44px;
+  }
+    .sm-login{
+    grid-area:index-login;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    text-align:center;
+
+    grid-template-areas:
+    "index-email  "
+    "index-password"
+    "index-login";
+  }
+  .email{
+    grid-area:index-email;
+  }
+  .password{
+    grid-area:index-password;
+  }
+  .login{
+    grid-area:index-login;
+    align-self:center;
+    background-color:#0080ff;
+  }
+  div div p input{
+    margin:5px 0px;
+      height:20px;
+  }
+  .login p input{
+    font-family:arial serif;
+    font-size:15px;
+    color:white;
+    background-color:#0040ff;
+    border:none;
+    height:25px;
+  }
+  /* all will be about the main content and items nested
+  inside the main content*/
+  main{
+    display:grid;
+    grid-area:index-content;
+    background-color:#f2f2f2;
+  }
+  h2{
+    font-family:arial;
+    font-size:25px;
+    margin:15px 0 ;
+    text-align:center;
+  }
+  p.how{
+    font-family:arial;
+    font-size:15px;
+    margin-bottom:15px;
+    text-align:center;
+  }
+  div.register{
+    display:grid;
+    grid-row-gap: 12px;
+    width:300px;
+    margin:0 auto;
+  }
+  div.register > .presentation{
+    display:flex;
+    flex-direction:column;
+  }
+  div.register > .presentation p input{
+  width:300px;
+  height:30px;
+  border:1px ridge #4d4d4d;
+  border-radius:4px;
+  }
+  ::-webkit-input-placeholder{
+    color:#a6a6a6;
+    font-size:20px;
+    padding-left:30px;
+  }
+  div p input.necesseray  {
+  width:300px;
+  height:30px;
+  border:1px ridge #4d4d4d;
+  border-radius:4px;
+  }
+  div p.title-items{
+    color:#666666;
+  }
+  div.day-of-birth{
+    display:flex;
+    flex-flow:row nowrap;
+  }
+  div.day-of-birth p > select{
+    width:68px;
+    height:30px;
+  }
+  select{
+    border:1px ridge #4d4d4d;
+  }
+  select option {
+    font-size:15px;
+    color:#4d4d4d;
+  }
+  div.gender-choice{
+    display:flex;
+  }
+  div.gender-choice p label{
+    padding-right:10px;
+  }
+  div.policy p{
+    font-family:arial;
+    font-size:12px;
+  }
+  div.policy p span{
+    color:#0080ff;
+  }
+  div.sign-up{
+    display:table;
+    width:200px;
+    height:40px;
+    font-family:arial;
+    font-size:20px;
+    background-color:#00cc00;
+    color:white;
+  }
+  div.sign-up p {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+  }
+  div.busness{
+    width:300px;
+    border-top:thin ridge black;
+    margin:20px 0 100px;
+    padding-top:20px;
+  }
+  div.busness p{
+    font-family:arial;
+    font-size:15px;
+    color:#404040;
+  }
+  div.busness p span{
+    font-family:arial;
+    font-size:15px;
+    color:#0080ff;
+  }
+  /* all style applied to sidebar*/
+  aside{
+    grid-area:index-sidebar;
+    background-color:#f2f2f2;
+    display:none;
+  }
+  .sidebar{
+    margin-left:15%;;
+  }
+    h2.log{
+      font-family:arial;
+      font-size:40px;
+      margin:15px 0 ;
+    }
+    p.log{
+      font-family:arial;
+      font-size:15px;
+      margin-bottom:15px;
+    }
+    div.images{
+      margin-left:20px;
+    }
+  .profile-container{
+    display:flex;
+    flex-direction:row;
+  }
+  div.profile{
+    width:200px;
+    display:grid;
+    grid-template-columns:200px;
+    grid-template-rows:250px 50px;
+    grid-template-areas:
+    "index-profile"
+    "index-name";
+  }
+  #margin{
+  margin-left:15px;
+  }
+  .picture-profile{
+    grid-area:index-profile;
+    width:200px
+  }
+  .picture-profile img{
+  width:100%;
+  height:250px;
+  }
+  #icon {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    border:thin ridge black;
+    color:#0080ff;
+  }
+  .name{
+    grid-area:index-name;
+    background-color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:black;
+    font-family:arial;
+    font-size:15px;
+  }
+  #color a{
+    color:#0080ff;
+  }
+  /*all style to my footer*/
+  footer{
+    grid-area:index-footer;
+    display:none;
+  }
+  ul{
+    display:flex;
+    flex-direction:row;
+    list-style:none;
+    margin:10px 0;
+    justify-content:flex-start;
+  }
+  ul.languages{
+    align-items:center;
+  }
+  li{
+    padding-left:10px;
+    font-family:arial;
+    font-size:15px;
+  }
+  .wrap-footer{
+    width:fit-content;
+    margin:0 auto;
+  }
+  li i{
+  color:111;
+  font-size:20px;
+  }
+
+
+  @media only screen and (min-width:1000px){
+    .site{
+      width:100%;
+      grid-template-columns: 50% 50%;
+      grid-template-rows:75px auto 100px;
+      grid-template-areas:
+      "index-header index-header"
+      "index-sidebar index-content"
+      "index-footer index-footer";
+    }
+    header{
+      grid-area:index-header;
+      color:white;
+      display:grid;
+      grid-template-columns:50% 50%;
+      grid-template-rows:1fr ;
+      grid-template-areas:
+      "index-facebook index-login";
+    }
+    div.facebook-logo{
+      grid-area:index-facebook;
+      align-self: center;
+      text-align:left;
+      margin-left:15%;
+      font-size:44px;
+    }
+      .sm-login{
+      grid-area:index-login;
+      display:grid;
+      align-self: center;
+      text-align:left;
+      grid-template-columns:190px 190px 35px ;
+      grid-template-rows:1fr ;
+      grid-template-areas:
+      "index-email index-password index-login";
+    }
+    .email{
+      grid-area:index-email;
+    }
+    .password{
+      grid-area:index-password;
+    }
+    .login{
+      grid-area:index-login;
+    }
+     main{
+      display:grid;
+      grid-area:index-content;
+    }
+    h2{
+      text-align:left;
+    }
+    p.how{
+      text-align:left;
+    }
+    div.register{
+      margin:0;
+      width:auto;
+    }
+    div.register > .presentation{
+      display:flex;
+      flex-direction:row;
+    }
+    div.register > .presentation p input{
+    width:200px;
+    height:40px;
+    border:1px ridge #4d4d4d;
+    }
+    #last-name{
+      margin-left:18px;
+    }
+    div.register > .presentation p input.necesseray{
+    width:420px;
+    height:40px;
+    }
+    div.busness{
+      width:420px;
+    }
+    aside{
+      display:block;
+    }
+    footer{
+      display:block;
+    }
+  }
